@@ -19,7 +19,7 @@ This program is designed to help with the categorization of bank transaction des
 ### Setup & Installation
 Make sure you have all the necessary libraries installed. Most importantly, ensure that torch, transformers, and pandas are available.
 ```bash
-pip install torch transformers pandas
+pip install -r requirements.txt
 ```
 ### Categories/Subcategories
 This program comes with a standard set of categories and subcategories to categorize your bank transactions. Below is the default categorization schema:

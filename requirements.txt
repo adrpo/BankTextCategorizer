@@ -1,0 +1,10 @@
+torch
+transformers
+pandas
+PyQt6
+PyQt6-WebEngine
+scikit-learn
+NumPy
+tensorflow
+nltk
+
