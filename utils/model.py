@@ -164,7 +164,7 @@ def plot_training_history(history):
 def execute_cat_model(cat_model, cat_train_dataloader, cat_val_dataloader, device, num_categories, learning_rate, epochs):
     '''Category Training & Saving'''    
     cat_model.to(device)
-    category_history = train_model(cat_model, cat_train_dataloader, cat_val_dataloader, epochs, learning_rate, device, num_categories)
+    category_history = train_model(cat_model, 'category', cat_train_dataloader, cat_val_dataloader, epochs, learning_rate, device, num_categories)
     # Move the model back to CPU before saving
     cat_model.to('cpu')
     cat_model_save_path = 'models/pt_cat_modelV1'
@@ -186,7 +186,7 @@ def main():
     cat_model, sub_model, cat_train_dataloader, cat_val_dataloader, \
     sub_train_dataloader, sub_val_dataloader, device, num_categories, num_subcategories = init_model_data()
     # Execute & Save Models
-    #execute_cat_model(cat_model, cat_train_dataloader, cat_val_dataloader, device, num_categories, learning_rate, epochs)
+    execute_cat_model(cat_model, cat_train_dataloader, cat_val_dataloader, device, num_categories, learning_rate, epochs)
     execute_sub_model(sub_model, sub_train_dataloader, sub_val_dataloader, device, num_subcategories, learning_rate, epochs)
 if __name__ == '__main__':
     main()

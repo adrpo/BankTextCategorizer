@@ -161,7 +161,7 @@ class AddData(QWidget):
 
         try:
             if len(self.csv_files) == 1:
-                df_to_process = pd.read_csv(self.csv_files[0])
+                df_to_process = pd.read_csv(self.csv_files[0], delimiter=";")
             else:
                 df_to_process = self.logic.combined_data
 
